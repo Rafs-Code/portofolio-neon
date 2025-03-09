@@ -1,0 +1,112 @@
+:root {
+    --primaryBgColor: #121212;
+    --secondaryBgColor: #1E1E1E;
+    --textColor: #E0E0E0;
+    --mainColor: #7b4bb7;
+}
+
+.info img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(0%);
+}
+
+.info img:hover {
+    transform: scale(1.1) rotate(10deg); /* Efek hover membesar dan berputar */
+    filter: grayscale(0%) drop-shadow(0 0 10px black); /* Glow effect */
+}
+
+.skills {
+    background: linear-gradient(180deg, var(--primaryBgColor) 0%, var(--secondaryBgColor) 50%, var(--primaryBgColor) 100%);
+}
+
+.skills .container {
+    background: rgba(0, 0, 0, 0);
+    color: var(--textColor);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.753);
+}
+
+.skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.skills .container .bar {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: #7c4bb731;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.445);
+}
+
+.skills .container .bar:hover {
+    background: linear-gradient(180deg, var(--primaryBgColor) 0%, var(--mainColor) 30%, var(--primaryBgColor) 100%);
+    box-shadow: 0 4px 16px var(--mainColor);
+    transform: scale(1.03);
+}
+
+.skills .container .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills .container .bar .info span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.219);
+}
+
+/* responsive */
+
+@media screen and (max-width:1000px) {
+    .skills .container {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .skills .container .row {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+
+    .skills .container {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /* .skills .container {
+        margin: 0;
+        padding: 0;
+    } */
+
+    .skills .container .row {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+
+    /* .skills .container {
+        margin-top: 5px;
+        width: 100%;
+    } */
+}

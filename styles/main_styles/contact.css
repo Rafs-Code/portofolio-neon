@@ -1,0 +1,128 @@
+:root {
+    --primaryBgColor: #121212;
+    --secondaryBgColor: #1E1E1E;
+    --textColor: #E0E0E0;
+    --mainColor: #8A2BE2;
+}
+
+.contact {
+    background: linear-gradient(180deg, var(--primaryBgColor) 0%, var(--secondaryBgColor) 50%, var(--primaryBgColor) 100%);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--textColor);
+    background: #1e1e1e00;
+    border-radius: 2rem;
+    border: 2px solid var(--mainColor);
+    box-shadow: 0 0 10px  var(--mainColor);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: var(--secondaryBgColor);
+    /* background: linear-gradient(to bottom, var(--primaryBgColor) .1%, var(--secondaryBgColor) 99.9%); */
+    /* box-shadow: 0 0 16px 0 black; */
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--mainColor);
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--mainColor);
+    color: black;
+    box-shadow: 0 0 25px var(--mainColor);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--mainColor);
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* responsive */
+
+@media screen and (max-wdith:991px) {
+    contact form {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}

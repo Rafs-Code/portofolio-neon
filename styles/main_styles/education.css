@@ -1,0 +1,170 @@
+:root {
+    --primaryBgColor: #121212;
+    --secondaryBgColor: #1E1E1E;
+    --textColor: #E0E0E0;
+    --mainColor: #8A2BE2;
+}
+
+.education {
+    background: linear-gradient(180deg, var(--primaryBgColor) 0%, var(--secondaryBgColor) 50%, var(--primaryBgColor) 100%);
+}
+
+.education .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: rgb(179, 0, 250);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -2px;
+    box-shadow: 0 0 10px var(--mainColor);
+}
+
+.education .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.education .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    right: -17px;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid var(--mainColor);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 100;
+    font-size: 1.89rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: rgb(90, 64, 64);
+}
+
+.education .left {
+    left: 0;
+}
+
+.education .right {
+    left: 50%;
+}
+
+.education .left::before {
+    content: "";
+    height: 0 ;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--mainColor);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--mainColor);
+}
+
+.education .right::before {
+    content: "";
+    height: 0 ;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--mainColor);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--mainColor) transparent transparent;
+}
+
+.education .right::after {
+    left: -16px;
+}
+
+.education .content {
+    background: var(--mainColor);
+    position: relative;
+    border-radius: 6px;
+    border: 2px solid #e0e0e044;
+    box-shadow: 0 0 10px var(--mainColor);
+    transition: 0.3s ease-in-out;
+}
+
+.education .content:hover {
+    box-shadow: 0 0 25px var(--mainColor);
+}
+
+.education .content .tag {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.education .content .desc {
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.education .content .tag h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.education .content .desc p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+/* responsive */
+
+@media screen and (max-width:600px) {
+    .education .timeline {
+        margin-top: 2rem;
+    }
+
+    .education .timeline::after {
+        left: 31px;
+    }
+
+    .education .container {
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 2rem;
+    }
+
+    .education .container::after {
+        font-size: 2.2rem;
+    }
+
+    .education .container::before {
+        left: 61px;
+        border: medium solid var(--mainColor);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--mainColor), transparent transparent;
+    }
+
+    .education .left::after {
+        left: 15px;
+    }
+
+    .education .right::after {
+        left: 15px;
+    }
+
+    .education .right {
+        left: 0%;
+    }
+}
